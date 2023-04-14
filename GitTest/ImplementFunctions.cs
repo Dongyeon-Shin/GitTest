@@ -48,6 +48,38 @@ namespace GitTest
             }
             return sum;
         }
+        static int[] FindCommonItems(int[] arr1, int[] arr2, int[] arr3)
+        {
+            List<int> commonNumbers = new List<int>();
+
+            for (int i = arr1.Min(); i <= arr1.Max(); i++)
+            {
+                foreach (int item in arr1)
+                {
+                    if (i == item)
+                    {
+                        foreach (int item2 in arr2)
+                        {
+                            if (item == item2)
+                            {
+                                foreach (int item3 in arr3)
+                                {
+                                    if (item == item3)
+                                    {
+                                        commonNumbers.Add(item);
+                                        break;
+                                    }
+                                }
+                                break;
+                            }
+
+                        }
+                        break;
+                    }
+                }
+            }
+            return commonNumbers.ToArray();
+        }
 
     }
 }
