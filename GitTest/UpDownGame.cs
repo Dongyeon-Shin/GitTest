@@ -15,6 +15,11 @@ namespace GitTest
             int guessNumber;
             for (int i = 0; i < 10; i++)
             {
+                Console.WriteLine("Select Number. 0 ~ 999");
+                while (!(int.TryParse(Console.ReadLine(), out guessNumber)) || guessNumber > 999 || guessNumber < 0)
+                {
+                    Console.WriteLine("Wrong Value.");
+                }
                 if (i == 9)
                 {
                     Console.WriteLine("Game Over.");
