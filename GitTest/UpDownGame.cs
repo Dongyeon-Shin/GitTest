@@ -20,6 +20,19 @@ namespace GitTest
                 {
                     Console.WriteLine("Wrong Value.");
                 }
+                if (guessNumber == comNumber)
+                {
+                    Console.WriteLine("You Win!");
+                    break;
+                }
+                else if (guessNumber > comNumber)
+                {
+                    Console.WriteLine("Down.");
+                }
+                else
+                {
+                    Console.WriteLine("Up.");
+                }
                 if (i == 9)
                 {
                     Console.WriteLine("Game Over.");
