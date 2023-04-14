@@ -14,6 +14,20 @@ namespace GitTest
             string word = Console.ReadLine(); ;
             Console.WriteLine(sentence.LastIndexOf(word));
         }
+        static void CountWords()
+        {
+            string sentence = Console.ReadLine();
+            char space = ' ';
+            int count = 1;
+            foreach (char c in sentence)
+            {
+                if (c == space)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine(count);
+        }
 
     }
 }
