@@ -42,7 +42,7 @@ namespace GitTest
         static int SumOfDigits(int num)
         {
             int sum = 0;
-            for (int i = num; i > 0; i = i / 10)
+            for (int i = num; i > 0; i /= 10)
             {
                 sum += i % 10;
             }
