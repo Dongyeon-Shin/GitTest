@@ -156,12 +156,31 @@ namespace GitTest
             Player player = new Player();
             puzzle.Shuffle();
             puzzle.PrintPuzzleBoard();
+            bool isGameWin = false;
             while (true)
             {
                 player.GetKeyInput();
                 player.Move(puzzle);
                 puzzle.PrintPuzzleBoard();
+                isGameWin = CheckGameClear(puzzle.PuzzleBoard);
+                if(isGameWin)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Clear");
+                    break;
+                }
             }
+        }
+        public bool CheckGameClear(int[] puzzle)
+        {
+            for (int i = 0; i < puzzle.Length; i++)
+            {
+                if (puzzle[i] != i)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
