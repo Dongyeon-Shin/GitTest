@@ -14,7 +14,7 @@ namespace GitTest
             int lastSelectedPosition;
             while (true)
             {
-                PringBingoBoard(bingoBoard);
+                PrintBingoBoard(bingoBoard);
                 lastSelectedPosition = GetInput(bingoBoard);
                 if (CheckResult(bingoBoard, lastSelectedPosition))
                 {
